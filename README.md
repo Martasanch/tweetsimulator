@@ -1,5 +1,5 @@
 # tweetsimulator
-
+Creado proyecto práctico de VUE-3. Uso de Vue 3, Vue-CLI, Bindings, API, Router, Vuex, Componentes, Formularios, Composition API
 ## Project setup
 ```
 npm install
