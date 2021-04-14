@@ -1,18 +1,25 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+
+<Menu :openCloseForm="openCloseForm" :showForm="showForm"/>
+<TweetForm :showForm="showForm"/>
+
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import Menu from "@/components/Menu"
+import TweetForm from "@/components/TweetForm"
+import useFormTweet from "@/hooks/useFormTweet"
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    Menu,
+    TweetForm
+ 
+  },
+  setup(){
+    return{
+      ...useFormTweet() //con ... obtengo solo el contenido
+    }
   }
 }
 </script>
